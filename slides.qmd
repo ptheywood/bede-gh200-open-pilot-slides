@@ -1,0 +1,183 @@
+---
+title: "N8 CIR Bede: GH200 pilot"
+author: 
+  - "Peter Heywood, Research Software Engineer"
+institute: 
+  - "The University of Sheffield"
+date: ""
+logo: ./img/UOSLogo_Primary_Violet_RGB.svg
+footer: "N8 CIR Bede: GH200 pilot"
+
+format:
+  revealjs:
+    theme: theme/tuos.scss
+    embed-resources: true  # only enable when publish-ready for perf reasons
+    template-partials: 
+      - title-slide.html
+    # show-notes: separate-page
+    slide-number: c
+    width: 1050
+    height: 700
+    margin: 0.1
+    min-scale: 0.2
+    max-scale: 2.0
+    auto-stretch: false
+    fontsize: 32px
+    navigation-mode: linear
+    controls: true
+    mouse-wheel: true
+
+# title slide background
+title-slide-attributes:
+  data-background-color: "#9ADBE8" # $tuos-powder-blue
+  # data-background-color: "#D7F1F6" # $tuos-powder-blue-40
+
+# https://quarto.org/docs/presentations/revealjs
+---
+
+## N8 CIR Bede - Tier 2 HPC facility
+
+:::: {.columns}
+
+::: {.column .smaller width="50%"}
+
++ GPU system with non-`x86_64` CPUs
+  + Higher-bandwidth host-device communication
+  + Reduced software compatibility
++ Free at point of use for N8 institutes
+  + Any *compatible* GPU workloads
++ Supports multi-node multi-GPU jobs
+
+:::
+
+::: {.column width="50%"}
+
+![[n8cir.org.uk/bede/](https://n8cir.org.uk/bede/)](img/n8cir/2020_11_10_bede_cmyk.png)
+
+:::
+
+::::
+
+:::: {.columns}
+
+----
+
+::: {.column .smaller width="50%"}
+
++ Power 9 (`ppc64le`) Partitions:
+  + 128 (+8) V100 GPUs
+  + 16 T4 GPUs
+
+:::
+
+::: {.column width="50%"}
+
++ **ARM (`aarch64`) Pilot:**
+    + **2 (+1) GH200 Superchips**
+
+:::
+
+::::
+
+## [NVIDIA Grace Hopper Superchip](https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
++ GH200 480GB
+  + **72-core ARM CPU**
+  + 480GB LPDDR5X
+  + H100 GPU (132 SMs)
+  + 96GB HBM3e (4TB/s)
+  + **NVLink-C2C (900 GB/s bidirectional bandwidth)**
+  + 450-1000W (900W in Bede)
+
+:::
+
+::: {.column width="50%"}
+
+<style type="text/css">
+ .reveal img.gh-fig {
+    object-fit:cover; width: 400px; height: 400px;
+ }
+</style>
+
+![NVIDIA Grace Hopper Superchip](img/nvidia/nvidia-gh200-grace-hopper-superchip-platform.png){.gh-fig}
+
+:::
+
+::::
+
+## Host-device interconnect bandwidth
+
+::: {.even-smaller}
+
+![[github.com/ptheywood/gpu-interconnect-plots](https://github.com/ptheywood/gpu-interconnect-plots)](img/ptheywood/interconnects-tuos.png){fig-alt="GPU Host-Device Interconnect Bandwidth for current TUoS accessible GPUs" width="90%" height="90%"}
+
+:::
+
+## PyTorch GPT-2 fine-tuning benchmark
+
+:::: {.columns}
+
+::: {.column .smaller width="25%"}
+
++ Based on [previous work by RIT & RSE](https://notesrcg.blogspot.com/2023/12/blog-post.html)
++ GPT 2 (124 million parameters)
++ Wikitext-2 (raw)
++ Batch size 8
++ FP32 & FP16
++ NGC 24.02 container
+
+:::
+
+::: {.column width="75%"}
+
+![GPT-2 Wikitext 2 Benchmark FP32 performance](img/rse-sheffield/ngc-pytorch-24.02-fp32-samples-per-second.png)
+
+:::
+
+::::
+
+::: {.centered .even-smaller}
+
+[github.com/RSE-Sheffield/pytorch-transformers-wikitext2-benchmark](https://github.com/RSE-Sheffield/pytorch-transformers-wikitext2-benchmark)
+
+[rse.shef.ac.uk/blog/2024-05-08-bede-tier-2-hpc-nvidia-grace-hopper-superchip/](https://rse.shef.ac.uk/blog/2024-05-08-bede-tier-2-hpc-nvidia-grace-hopper-superchip/)
+
+:::
+
+
+## Accessing Bede
+
++ Access to Bede is project based
++ Process: [n8cir.org.uk/bede/accessing-bede/](https://n8cir.org.uk/bede/accessing-bede/)
++ Online Form: [n8cir.org.uk/bede/bede-application/](https://n8cir.org.uk/bede/bede-application/)
+
+<!--  -->
+
++ Documentation
+    + [docs.hpc.shef.ac.uk/en/latest/other-uk-hpc-resources/bede.html](https://docs.hpc.shef.ac.uk/en/latest/other-uk-hpc-resources/bede.html)
+    + [bede-documentation.readthedocs.io/](https://bede-documentation.readthedocs.io/)
+
+
+::: {.center .bigger .small-call-to-action}
+
+Any questions on Bede (or JADE):
+
+[tier-2-hpc-support-group@sheffield.ac.uk](mailto:tier-2-hpc-support-group@sheffield.ac.uk)
+
+:::
+
+## Bede documentation includes `aarch64` {.nostretch}
+
+::: {.even-smaller}
+
+![[bede-documentation.readthedocs.io/](https://bede-documentation.readthedocs.io/)](img/n8cir/gh200-docs-screenshot.png){ height="500px"}
+
+:::
+
+<!-- # Thank you {.divider .flamingo} -->
+
+<!-- # Additional Slides {.divider .coral visibility="uncounted" data-hide-slide-number='true'} -->
