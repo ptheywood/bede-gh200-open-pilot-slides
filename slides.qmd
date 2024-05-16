@@ -153,14 +153,14 @@ title-slide-attributes:
 ## Accessing Bede
 
 + Access to Bede is project based
-+ Process: [n8cir.org.uk/bede/accessing-bede/](https://n8cir.org.uk/bede/accessing-bede/)
++ Process Documentation: [n8cir.org.uk/bede/accessing-bede/](https://n8cir.org.uk/bede/accessing-bede/)
 + Online Form: [n8cir.org.uk/bede/bede-application/](https://n8cir.org.uk/bede/bede-application/)
 
 <!--  -->
 
 + Documentation
     + [docs.hpc.shef.ac.uk/en/latest/other-uk-hpc-resources/bede.html](https://docs.hpc.shef.ac.uk/en/latest/other-uk-hpc-resources/bede.html)
-    + [bede-documentation.readthedocs.io/](https://bede-documentation.readthedocs.io/)
+    + [bede-documentation.readthedocs.io](https://bede-documentation.readthedocs.io)
 
 
 ::: {.center .bigger .small-call-to-action}
