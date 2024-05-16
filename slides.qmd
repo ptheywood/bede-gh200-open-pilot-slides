@@ -122,7 +122,7 @@ title-slide-attributes:
 
 :::: {.columns}
 
-::: {.column .smaller width="25%"}
+::: {.column .even-smaller width="20%"}
 
 + Based on [previous work by RIT & RSE](https://notesrcg.blogspot.com/2023/12/blog-post.html)
 + GPT 2 (124 million parameters)
@@ -133,7 +133,7 @@ title-slide-attributes:
 
 :::
 
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ![GPT-2 Wikitext 2 Benchmark FP32 performance](img/rse-sheffield/ngc-pytorch-24.02-fp32-samples-per-second.png)
 
