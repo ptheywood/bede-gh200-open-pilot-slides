@@ -47,6 +47,7 @@ title-slide-attributes:
 + Free at point of use for N8 institutes
   + Any *compatible* GPU workloads
 + Supports multi-node multi-GPU jobs
++ Funded until at least 2025-03-31
 
 :::
 
