@@ -6,7 +6,7 @@ institute:
   - "The University of Sheffield"
 date: ""
 logo: ./img/UOSLogo_Primary_Violet_RGB.svg
-footer: "N8 CIR Bede: GH200 pilot"
+footer: "<a href='https://ptheywood.uk/bede-gh200-open-pilot-slides'>ptheywood.uk/bede-gh200-open-pilot-slides</a>"
 
 format:
   revealjs:
