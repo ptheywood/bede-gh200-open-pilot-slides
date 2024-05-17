@@ -89,10 +89,10 @@ title-slide-attributes:
 + GH200 480GB
   + **72-core ARM CPU**
   + 480GB LPDDR5X
-  + H100 GPU (132 SMs)
+  + **H100 GPU (132 SMs)**
   + 96GB HBM3e (4TB/s)
-  + **NVLink-C2C (900 GB/s bidirectional bandwidth)**
   + 450-1000W (900W in Bede)
+  + [**NVLink-C2C (900 GB/s bidirectional bandwidth)**]{.tuos-deep-violet}
 
 :::
 
